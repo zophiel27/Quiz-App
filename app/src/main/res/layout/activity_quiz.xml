@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QuizActivity"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/btn_previous"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/previous"
+            android:textSize="11sp"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_question_number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="/10"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sample Question 1\nIn what year did the US host the FIFA World Cup for the first time?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:elevation="6dp"
+            android:translationZ="6dp"
+            android:background="@drawable/question_background"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroupOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/rb_option_1986"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1986"
+                android:background="@drawable/option_selector"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rb_option_1994"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1994"
+                android:checked="true"
+                android:background="@drawable/option_selector"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rb_option_2002"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2002"
+                android:background="@drawable/option_selector"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rb_option_2010"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2010"
+                android:background="@drawable/option_selector"
+                android:padding="12dp"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:padding="0dp"
+            android:textSize="11sp"
+            android:gravity="center"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>
