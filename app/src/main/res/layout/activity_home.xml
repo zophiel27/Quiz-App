@@ -28,6 +28,9 @@
             android:layout_marginTop="100dp"
             android:textColor="@color/white"
             android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             />
 
         <EditText
@@ -40,7 +43,9 @@
             android:background="@drawable/edit_text_style"
             android:padding="10dp"
             android:textSize="16sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
     </LinearLayout>
 
     <LinearLayout
