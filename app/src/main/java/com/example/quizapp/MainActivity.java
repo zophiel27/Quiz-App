@@ -18,12 +18,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
-
     }
 
     private void init() {
-        logo = findViewById(R.id.logo_id);
 
+        logo = findViewById(R.id.logo_id);
         logo.setAnimation(AnimationUtils.loadAnimation(this, R.anim.logo_animation));
 
         new Handler().postDelayed(new Runnable() {
