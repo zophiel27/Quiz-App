@@ -15,8 +15,6 @@ public class Home extends AppCompatActivity {
 
     Button startBtn;
     EditText nameEt;
-    ActivityResultLauncher<Intent> getDataLauncher;
-    int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,23 +41,6 @@ public class Home extends AppCompatActivity {
     }
     private void init(){
         startBtn = findViewById(R.id.btnStart);
-
         nameEt = findViewById(R.id.etName);
-
-        score = 0;
-        getDataLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
-                (result)->{
-                    if(result.getResultCode() == RESULT_CANCELED)
-                    {
-                        Toast.makeText(this, "Data not entered by user", Toast.LENGTH_SHORT).show();
-                    }
-                    else if(result.getResultCode() == RESULT_OK && result.getData()!=null)
-                    {
-                        Intent dataIntent = result.getData();
-                        score = score + dataIntent.getIntExtra("key_result", 0);
-                        Toast.makeText(this, score, Toast.LENGTH_SHORT).show();
-                    }
-                });
-
     }
 }

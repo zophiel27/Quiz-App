@@ -18,7 +18,6 @@ public class Quiz extends AppCompatActivity {
     RadioGroup rgOptions;
     Button nextButton, prevButton;
     String name;
-
     String[] questions = {
             "What is 5 + 3?",
             "What is 10 - 4?",
@@ -31,7 +30,6 @@ public class Quiz extends AppCompatActivity {
             "What is 7 + 2?",
             "What is 15 - 7?"
     };
-
     String[][] options = {
             {"6", "7", "8", "9"},
             {"4", "5", "6", "10"},
@@ -44,9 +42,7 @@ public class Quiz extends AppCompatActivity {
             {"7", "8", "9", "10"},
             {"6", "8", "7", "9"}
     };
-
     int[] correctAnswers = {2, 2, 2, 1, 2, 0, 3, 1, 2, 1};
-
     int currentQuestion = 0;
     int score = 0;
     int[] userAnswers = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
@@ -74,7 +70,6 @@ public class Quiz extends AppCompatActivity {
                 intent.putExtra("key_score", score);
                 startActivity(intent);
                 finish();
-                Toast.makeText(this, score, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -100,7 +95,7 @@ public class Quiz extends AppCompatActivity {
     }
     void updateQuestion() {
         questionText.setText(questions[currentQuestion]);
-        tv_question_number.setText((currentQuestion+1)+"/10");
+        tv_question_number.setText((currentQuestion + 1) + "/10");
         rgOptions.clearCheck();
         for (int i = 0; i < options[currentQuestion].length; i++) {
             ((RadioButton) rgOptions.getChildAt(i)).setText(options[currentQuestion][i]);

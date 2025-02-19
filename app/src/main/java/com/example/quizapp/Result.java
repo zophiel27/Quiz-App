@@ -33,7 +33,7 @@ public class Result extends AppCompatActivity {
         btnShare.setOnClickListener(v -> {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
-            shareIntent.putExtra(Intent.EXTRA_TEXT, "I scored " + score + "/10 in the Quiz App!");
+            shareIntent.putExtra(Intent.EXTRA_TEXT, name + " scored " + score + "/10 in the Quiz App!");
             startActivity(Intent.createChooser(shareIntent, "Share via"));
         });
     }
